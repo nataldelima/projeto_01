@@ -55,6 +55,11 @@ header .logo {
     color: white;
 }
 
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
 .mobile {
     display: none;
 }
@@ -78,6 +83,10 @@ nav.desktop a {
     text-decoration: none;
     color: white;
 
+}
+
+nav.desktop a:hover {
+    text-decoration: underline;
 }
 
 .banner-principal {
@@ -272,7 +281,7 @@ p.nome-autor {
     nav.mobile ul {
         top: 55px;
         z-index: 3;
-        display: block;
+        display: none;
         position: absolute;
         left: 0;
         text-align: center;
