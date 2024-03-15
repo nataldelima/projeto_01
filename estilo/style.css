@@ -5,19 +5,26 @@
     font-family: "Open Sans";
 }
 
+img {
+    width: 100%;
+    max-width: 400px;
+}
+
 .center {
-    max-width: 1281px;
-    padding: 0 2%;
+    max-width: 1280px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
 .w33 {
-    width: 33%;
+    width: 33.3%;
+    padding: 0 10px;
 
 }
 
 
 .w50 {
+    padding: 0 2%;
     width: 50%;
 }
 
@@ -54,7 +61,7 @@ header .logo {
 
 nav.desktop ul {
     position: relative;
-    top: 60px;
+    top: 6px;
     list-style-type: none;
 }
 
@@ -70,5 +77,248 @@ nav.desktop li {
 nav.desktop a {
     text-decoration: none;
     color: white;
+
+}
+
+.banner-principal {
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+    width: 100%;
+    height: 600px;
+    background-color: rgba(51, 51, 51, 0.6);
+    z-index: 1;
+}
+
+section.banner-principal form {
+    width: 93%;
+    max-width: 600px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+section.banner-principal form h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+section.banner-principal form input[type=email] {
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background: white;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+section.banner-principal form input[type=submit] {
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background: #00c59e;
+    color: white;
+    font-size: 22px;
+    padding-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+}
+
+section.descricao-autor {
+    padding: 40px 0;
+}
+
+section.descricao-autor h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #444;
+
+}
+
+section.descricao-autor p {
+    color: #444;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+section.especialidades {
+    padding: 40px 0;
+    background-color: #e2e2e2;
+}
+
+section.especialidades h2.title {
+    color: 999;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.box-especialidade {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.box-especialidade h3 {
+    /*color: #404580;*/
+    color: #444;
+    font-size: 40px;
+}
+
+.box-especialidade p {
+    font-size: 15px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.box-especialidade img {
+
+    width: 50px;
+    height: 50px;
+}
+
+section.extras {
+    padding: 30px 0;
+    background-color: #404580
+}
+
+.servicos-container,
+.depoimentos-container {
+    padding: 0 50px;
+}
+
+section.extras .title {
+    color: white;
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.depoimento-single {
+    padding: 15px 0;
+    border-bottom: 1px solid #5056a0;
+}
+
+p.depoimento-descricao {
+    font-size: 15px;
+    color: white;
+    font-weight: 300px;
+}
+
+p.nome-autor {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+@media (max-width:768px) {
+
+    img {
+        display: block;
+        margin: 0 auto;
+        float: none !important;
+    }
+
+
+    .w50 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .w33 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .box-especialidade {
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+}
+
+@media (max-width:700px) {
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        display: block;
+    }
+
+    .botao-menu-mobile {
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav.mobile ul {
+        top: 55px;
+        z-index: 3;
+        display: block;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav.mobile li {
+        display: block;
+        padding: 8px 0;
+        font-size: 17px;
+        font-weight: 300;
+        background: white;
+        border-bottom: 1px solid #ccc;
+        ;
+        font-size: 15px;
+    }
+
+    nav.mobile li a {
+        display: block;
+        color: #444;
+        text-decoration: none;
+
+    }
+}
+
+footer {
+    background-color: #313462;
+    padding: 30px 0;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.servicos ul {
+    margin: 20px 0;
+    list-style-position: inside;
+}
+
+.servicos li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
 
 }

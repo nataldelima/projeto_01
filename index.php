@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Projeto 01</title>
 </head>
 
@@ -31,6 +33,11 @@
             </nav>
 
             <nav class="mobile right">
+                <div class="botao-menu-mobile">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Sobre</a></li>
@@ -43,7 +50,7 @@
     </header>
 
     <section class="banner-principal">
-
+        <div class="overlay"></div>
         <div class="center">
             <form action="">
                 <h2>Qual o seu melhor email?</h2>
@@ -73,7 +80,7 @@
             </div>
 
             <div class="w50 left">
-                <img src="img/natal.png" alt="">
+                <img class="right" src="img/natal.png" alt="">
             </div>
             <div class="clear"></div>
         </div>
@@ -82,25 +89,29 @@
         <div class="center">
             <h2 class="title">Especialidades</h2>
             <div class="w33 left box-especialidade">
-                <h3>Ícone 1</h3>
+                <img src="img/css3.ico" alt="">
                 <h3>CSS3</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat, delectus sequi blanditiis
                     quos facere dolorum earum et ad veniam cumque molestiae error nesciunt eum fuga eius velit totam
                     beatae?</p>
             </div>
             <div class="w33 left box-especialidade">
-                <h3>Ícone 2</h3>
+                <img src="img/html5.ico" alt="">
+
+
                 <h3>HTML5</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat, delectus sequi blanditiis
                     quos facere dolorum earum et ad veniam cumque molestiae error nesciunt eum fuga eius velit totam
                     beatae?</p>
             </div>
             <div class="w33 right box-especialidade">
-                <h3>Ícone 3</h3>
+                <img src="img/js.ico" alt="">
                 <h3>JavaScript</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat, delectus sequi blanditiis
                     quos facere dolorum earum et ad veniam cumque molestiae error nesciunt eum fuga eius velit totam
                     beatae?</p>
+            </div>
+            <div class=" clear">
             </div>
         </div>
 
@@ -108,7 +119,7 @@
 
     <section class="extras">
         <div class="center">
-            <div class="w50 left">
+            <div class="w50 left depoimentos-container">
                 <h2 class="title">Depoimentos</h2>
                 <div class="depoimento-single">
                     <p class="depoimento-descricao">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
@@ -130,7 +141,7 @@
                 </div>
 
             </div>
-            <div class="w50 left">
+            <div class="w50 left servicos-container">
                 <h2 class="title">Serviços</h2>
                 <div class="servicos">
                     <ul>
