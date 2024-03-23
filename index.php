@@ -21,6 +21,8 @@
 
 <body>
 
+    <base base="<?= INCLUDE_PATH ?>" />
+
     <header>
         <div class="center">
             <div class="logo left">
@@ -30,9 +32,9 @@
             <nav class="desktop right">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>#sobre">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>#servicos">Serviços</a></li>
+                    <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
 
@@ -44,33 +46,48 @@
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                    <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="clear"></div>
         </div>
 
     </header>
-    <div>
-        <?php
-        $pagina = explode('/', $_SERVER['PHP_SELF']);
-        unset($pagina[0]);
-        unset($pagina[1]);
-        if (count($pagina) == 0) {
-            $pagina = 'home';
-        } else {
-            $pagina = implode('/', $pagina);
-        }
-        if (file_exists('pages/' . $pagina . '.php')) {
-            include ('pages/' . $pagina . '.php');
-        } else {
-            include ('pages/404.php');
-        }
-        ?>
+
+    <div class="container-principal">
+        <div>
+            <?php
+            $pagina = explode('/', $_SERVER['PHP_SELF']);
+            unset($pagina[0]);
+            unset($pagina[1]);
+            if (count($pagina) == 0) {
+                $pagina = 'home';
+            } else {
+                $pagina = implode('/', $pagina);
+            }
+            if (file_exists('pages/' . $pagina . '.php')) {
+                include ('pages/' . $pagina . '.php');
+            } else {
+                if ($pagina != 'sobre' && $pagina != 'servicos') {
+                    $pagina404 = true;
+                    include ('pages/404.php');
+                } else {
+                    include ('pages/home.php');
+                }
+
+            }
+            ?>
+
+        </div>
+        <div class="overlay-loading">
+            <img src="<?= INCLUDE_PATH; ?>img/ajax-loader.gif" alt="">
+        </div>
     </div>
-    <footer>
+    <footer <?php if (isset ($pagina404) && ($pagina404 == true))
+        echo "class='fixed'"; ?>>
         <div class="center">
             <p>Todos os direitos reservados</p>
+
         </div>
     </footer>
 

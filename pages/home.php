@@ -1,15 +1,28 @@
-<section class="banner-principal">
+<section class="banner-container">
+    <div id="b1" class="banner-single" style="background-image:url('<?= INCLUDE_PATH; ?>img/banner1.jpg')"></div>
+    <div id="b2" class="banner-single" style="background-image:url('<?= INCLUDE_PATH; ?>img/banner2.jpg')"></div>
+    <div id="b3" class="banner-single" style="background-image:url('<?= INCLUDE_PATH; ?>img/banner3.jpg')"></div>
     <div class="overlay"></div>
     <div class="center">
-        <form action="">
+
+
+        <form method="post" action="">
             <h2>Qual o seu melhor email?</h2>
             <input type="email" name="email" id="email" required>
+            <input type="hidden" name="identificador" value="form_home">
             <input type="submit" value="Cadastrar" name="acao">
         </form>
+
+
+    </div>
+
+    <div class="bullets-container">
     </div>
 </section>
 
-<section class="descricao-autor">
+
+
+<section class="descricao-autor" id="sobre">
     <div class="center">
         <div class="w50 left">
             <h2>Natal Lima</h2>
@@ -66,7 +79,7 @@
 
 </section>
 
-<section class="extras">
+<section class="extras" id="servicos">
     <div class="center">
         <div class="w50 left depoimentos-container">
             <h2 class="title">Depoimentos</h2>
